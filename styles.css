@@ -1,0 +1,71 @@
+/* General Styles */
+body {
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+    background-color: #FCE8E0;
+    color: #7E3717;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+input {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #7E3717;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    background-color: #7E3717;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #5D6737;
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.image-container img {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Page Styling */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Surat Styling */
+.farewell-letter {
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 24px;
+    color: #222918;
+    white-space: pre-line;
+    background: #FFF9F4;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
