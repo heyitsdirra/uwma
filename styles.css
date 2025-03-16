@@ -2,70 +2,93 @@
 body {
     font-family: 'Lexend', sans-serif;
     text-align: center;
-    background-color: #FCE8E0;
-    color: #7E3717;
+    background-color: #F8EDEB;
+    color: #5D3730;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-.title {
-    font-size: 28px;
-}
-
-input {
-    padding: 10px;
-    font-size: 18px;
-    border: 2px solid #7E3717;
-    border-radius: 5px;
-    width: 200px;
-    text-align: center;
-}
-
-button {
-    background-color: #7E3717;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 15px;
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-    background-color: #5D6737;
-    transform: scale(1.05);
-}
-
-/* Image Styling */
-.image-container img {
-    width: 40%;
-    max-width: 300px;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Page Styling */
+/* Halaman */
 .page {
     display: none;
+    padding: 30px;
 }
 
 .page.active {
     display: block;
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Surat Styling */
+/* Animasi Fade */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Title */
+.main-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #B25068;
+}
+
+/* Gambar (Tanpa Border) */
+.letter-img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+}
+
+/* Instruksi */
+.instruction {
+    font-size: 18px;
+    color: #943A4A;
+    margin-top: 20px;
+}
+
+/* Input & Button */
+input {
+    font-size: 18px;
+    padding: 10px;
+    width: 60%;
+    margin-top: 10px;
+    border: 2px solid #B25068;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #B25068;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-family: 'Lexend', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #943A4A;
+    transform: scale(1.05);
+}
+
+/* Surat */
+.letter-title {
+    font-size: 25px;
+    color: #943A4A;
+}
+
 .farewell-letter {
     font-family: 'La Belle Aurore', cursive;
-    font-size: 24px;
-    color: #222918;
-    white-space: pre-line;
-    background: #FFF9F4;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 500px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+    color: #5D3730;
+    margin: 20px;
+}
+
+.back-button {
+    background-color: #5D3730;
+    margin-top: 20px;
 }
