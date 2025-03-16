@@ -1,35 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-    showPage(0);
+    showPage("home-page");
 });
 
-let currentPage = 0;
-const pages = document.querySelectorAll(".page");
-
-function showPage(index) {
-    pages.forEach((page, i) => {
-        page.classList.toggle("active", i === index);
+function showPage(pageId) {
+    document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
     });
-    currentPage = index;
+    document.getElementById(pageId).classList.add("active");
 }
 
+// Cek Token & Ambil Data dari surat.json
 function cekToken() {
     let token = document.getElementById("tokenInput").value.trim().toLowerCase();
-    let suratData = {
-        "ratna": "Kamu luar biasa! 💖",
-        "shofiyya": "Jangan pernah berhenti bersinar ✨",
-        "ellisya": "Aku akan selalu ingat kamu! 🌸",
-        "bening": "Persahabatan kita seperti cerita dongeng, penuh kenangan indah! 🩷"
-    };
 
-    if (suratData[token]) {
-        document.getElementById("isiSurat").innerText = suratData[token];
-        showPage(1);
-    } else {
-        alert("Kode tidak valid! Coba lagi 💕");
-    }
+    fetch("surat.json")
+        .then(response => response.json())
+        .then(data => {
+            if (data[token]) {
+                document.getElementById("isiSurat").innerText = data[token];
+                showPage("letter-page");
+            } else {
+                alert("Invalid Code! Try Again.");
+            }
+        })
+        .catch(error => console.error("Error loading letter data:", error));
 }
 
+// Kembali ke Halaman Awal
 function kembaliKeAwal() {
-    showPage(0);
     document.getElementById("tokenInput").value = "";
+    showPage("home-page");
 }
