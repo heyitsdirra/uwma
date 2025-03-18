@@ -4,7 +4,7 @@ This is a cute & minimalist farewell letter website, where you enter a special c
 
 ## 📌 Features:
 ✅ Original illustration displayed on landing page
-✅ A code input to unlock the letter* 
+✅ A code input to unlock the letter
 ✅ Letter page with a Spotify embed on top
 ✅ Uses JSON for letter storage (easy to edit!)
 ✅ Beautiful pastel theme with handwriting font for the letter
