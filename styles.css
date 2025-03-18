@@ -82,7 +82,7 @@ button:hover {
 }
 
 .farewell-letter {
-    font-family: 'Nanum Pen Script';
+    font-family: 'Nanum Pen Script',cursive;
     font-size: 22px;
     color: #5D3730;
     margin: 20px;
