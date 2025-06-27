@@ -15,7 +15,7 @@ function cekToken() {
 
     // Cek tanggal dulu
     const today = new Date();
-    const bukaTanggal = new Date("2025-06-28");
+    const bukaTanggal = new Date("2025-06-27");
 
     if (today < bukaTanggal) {
         alert("🎁 Suratnya belum bisa dibuka, yaa. Silakan kembali pada tanggal 28 Juni 2025!");
