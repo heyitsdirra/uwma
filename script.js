@@ -13,7 +13,7 @@ function showPage(pageId) {
 function cekToken() {
     let token = document.getElementById("tokenInput").value.trim().toLowerCase();
 
-    fetch("surat.json")
+    fetch("surat.json?v=" + Date.now () )
         .then(response => response.json())
         .then(data => {
             if (data[token]) {
