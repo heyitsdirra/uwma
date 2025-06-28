@@ -11,16 +11,7 @@ function showPage(pageId) {
 
 // Cek Token & Ambil Data dari surat.json
 function cekToken() {
-    const token = document.getElementById("tokenInput").value.trim().toLowerCase();
-
-    // Cek tanggal dulu
-    const today = new Date();
-    const bukaTanggal = new Date("2025-06-27");
-
-    if (today < bukaTanggal) {
-        alert("🎁 Suratnya belum bisa dibuka, yaa. Silakan kembali pada tanggal 28 Juni 2025!");
-        return; // Stop di sini kalau tanggal belum cukup
-    }
+    let token = document.getElementById("tokenInput").value.trim().toLowerCase();
 
     fetch("surat.json")
         .then(response => response.json())
